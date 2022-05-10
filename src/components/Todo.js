@@ -33,7 +33,8 @@ const Todo = () => {
                                         <h3>{elem.data}</h3>
                                         <div className="todo-btn">
                                            
-                                            <i className="far fa-trash-alt add-btn" title="Delete Item" onClick={() => deleteTodo(elem.id)}></i>
+                                            <i className="far fa-trash-alt add-btn" 
+                                            title="Delete Item" onClick={() => dispatch(deleteTodo(elem.id))}></i>
                                         </div>
                                   </div>
                                 )
@@ -41,6 +42,11 @@ const Todo = () => {
 
                         }
                        
+                    </div>
+
+                    <div className="showItems">
+                        <button className="btn effect04" data-sm-link-text="remove All"
+                         onClick={()=>dispatch(removeTodo())}><span> CHECK LIST </span> </button>
                     </div>
         </div>
       </div>
